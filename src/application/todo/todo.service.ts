@@ -43,7 +43,7 @@ export class TodoService {
     return await this.todoRepository.save(todo);
   }
 
-  async deletedById(id: string) {
+  async deleteById(id: string) {
     await this.findOneOrFail(id);
     await this.todoRepository.softDelete(id);
   }
